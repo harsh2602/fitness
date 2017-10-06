@@ -1,3 +1,12 @@
+import React from 'react';
+import { View } from 'react-native';
+import {
+  FontAwesome,
+  MaterialIcons,
+  MaterialCommunityIcons
+} from '@expo/vector-icons';
+import { black } from './colors.js';
+
 export function getMetricMetaInfo(metric) {
   const info = {
     run: {
@@ -22,8 +31,8 @@ export function getMetricMetaInfo(metric) {
       type: 'steppers',
       getIcon() {
         return (
-          <View style={[styles.iconContainer, { backgroundColor: orange }]}>
-            <MaterialCommunityIcons name="bike" color={white} size={32} />
+          <View>
+            <MaterialCommunityIcons name="bike" color={black} size={32} />
           </View>
         );
       }
@@ -36,7 +45,7 @@ export function getMetricMetaInfo(metric) {
       type: 'steppers',
       getIcon() {
         return (
-          <View style={[styles.iconContainer, { backgroundColor: blue }]}>
+          <View>
             <MaterialCommunityIcons name="swim" color={white} size={35} />
           </View>
         );
@@ -64,7 +73,7 @@ export function getMetricMetaInfo(metric) {
       type: 'slider',
       getIcon() {
         return (
-          <View style={[styles.iconContainer, { backgroundColor: pink }]}>
+          <View>
             <MaterialCommunityIcons name="food" color={white} size={35} />
           </View>
         );
